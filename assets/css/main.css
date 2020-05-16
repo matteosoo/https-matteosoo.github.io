@@ -104,6 +104,10 @@ input, select, textarea {
 		font-weight: 400;
 		line-height: 1.75em;
 	}
+	[data-theme="dark"]
+	body, input, select, textarea {
+		color: #FFFFFF;
+	}
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -120,6 +124,7 @@ input, select, textarea {
 			color: #4acaa8 !important;
 		}
 
+
 	strong, b {
 		color: #777;
 		font-weight: 700;
@@ -134,7 +139,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #777;
+		color: #888;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
@@ -1763,6 +1768,10 @@ input, select, textarea {
 		position: relative;
 		margin: 0 0 1.6875em 0;
 	}
+	[data-theme="dark"]
+	header p {
+		color: #eeeeee;
+	}
 
 	header h2 + p {
 		font-size: 1.25em;
@@ -2831,6 +2840,10 @@ input, select, textarea {
 	#main > section {
 		border-top: solid 6px #f4f4f4;
 	}
+	[data-theme="dark"]
+	#main > section {
+		border-top: solid 6px #333333;
+	}
 
 		#main > section > .container {
 			padding: 6em 0 4em 0;
@@ -2849,6 +2862,15 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 4em 0 2em 0;
 	}
+	[data-theme="dark"]
+	#footer {
+		background: #222222;
+		border-top: 0;
+		color: #d4d4d4;
+		overflow: hidden;
+		padding: 4em 0 2em 0;
+	}
+
 
 		#footer .copyright {
 			line-height: 1em;
