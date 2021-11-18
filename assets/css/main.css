@@ -109,6 +109,7 @@ input, select, textarea {
 		color: lightgray;
 	}
 
+	/*hyperlink*/
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -119,16 +120,21 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
-	/*hyperlink*/
+	/*hyperlink after touching*/
 	a:hover {
 		border-bottom-color: transparent;
-		color: cornflowerblue !important;
-		/*font-weight: bold;*/
+		color: cadetblue !important;
+		font-weight: bold;
 	}
 
 
 	strong, b {
-		color: #222222;
+		color: #888;
+		font-weight: 700;
+	}
+	[data-theme="dark"]
+	strong, b {
+		color: lightgray;
 		font-weight: 700;
 	}
 
@@ -148,11 +154,11 @@ input, select, textarea {
 		margin: 0 0 0.5625em 0;
 	}
 
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		border: 0;
-		color: inherit;
-		text-decoration: none;
-	}
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			border: 0;
+			color: inherit;
+			text-decoration: none;
+		}
 
 	h2 {
 		font-size: 2em;
@@ -165,7 +171,7 @@ input, select, textarea {
 	}
 	[data-theme="dark"]
 	h3{
-		color: #D3D3D3;
+		color: #d3d3d3;
 	}
 
 	h4 {
@@ -174,7 +180,7 @@ input, select, textarea {
 	}
 	[data-theme="dark"]
 	h4{
-		color: #D3D3D3;
+		color: #d3d3d3;
 	}
 
 	h5 {
@@ -2541,7 +2547,7 @@ input, select, textarea {
 		background-color: #989898;
 		border-radius: 5px;
 		border: 0;
-		color: #FFFFFF !important;
+		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 700;
@@ -2557,8 +2563,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: cornflowerblue;
-			color: #FFFFFF !important;
+			background-color: cadetblue;
+			color: #ffffff !important;
 		}
 
 		input[type="submit"]:active,
@@ -2580,6 +2586,7 @@ input, select, textarea {
 			input[type="button"].icon:before,
 			.button.icon:before {
 				margin-right: 0.5em;
+				color: white;
 			}
 
 		input[type="submit"].fit,
@@ -2638,7 +2645,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: dodgerblue;
+			background-color: #4acaa8;
 			color: #ffffff !important;
 		}
 
@@ -2646,14 +2653,14 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: dodgerblue;
+				background-color: #5ed0b1;
 			}
 
 			input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
-				background-color: dodgerblue;
+				background-color: #39c29d;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2725,8 +2732,8 @@ input, select, textarea {
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		/*dark by the right page*/
-		background: dimgray;
-		color: #FFFFFF;
+		background: darkslategrey;
+		color: #ffffff;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2739,13 +2746,17 @@ input, select, textarea {
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
 			color: #ffffff;
 		}
+			#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
+				color: #ffffff;
+			}
+
 
 		#header header p {
-			color: dodgerblue;
+			color: #b7eadc;
 		}
 
 		#header a {
-			color: dodgerblue;
+			color: #d2f2e9;
 		}
 
 			#header a:hover {
@@ -2771,8 +2782,9 @@ input, select, textarea {
 				margin: 0;
 			}
 
+			/*right page intro*/
 			#header > header p {
-				color: whitesmoke;
+				color: #d2f2e9;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2810,7 +2822,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #FFFFFF;
+					border-top: solid 2px #ffffff;
 					display: block;
 					padding: 0;
 				}
@@ -2827,10 +2839,11 @@ input, select, textarea {
 						text-decoration: none;
 					}
 
+						/*right page scroll button (link)*/
 						#header > nav ul li a.active {
 							background: #fff;
-							color: black !important;
-							/*font-weight: bold;*/
+							color: #555555 !important;
+							font-weight: bold;
 						}
 
 					#header > nav ul li:first-child {
@@ -3389,7 +3402,7 @@ input, select, textarea {
 	}
 
 	.slider:before {
-		background-color: #FFFFFF;
+		background-color: #ffffff;
 		bottom: 2px;
 		content: "";
 		height: 26px;
@@ -3437,7 +3450,7 @@ input, select, textarea {
 		width: 100%;
 		height: 100%;
 		display: none;
-		color: #FFF;
+		color: #ffffff;
 		content: "";
 	}
 	.image-container:hover .after {
